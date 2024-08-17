@@ -1,5 +1,8 @@
 package game;
 
+import org.springframework.stereotype.Component;
+
+
 public class Pacman implements GameConsole{
     @Override
     public void up() {

@@ -7,8 +7,22 @@ import java.util.List;
 
 @Component
 public class BusinessService {
-    @Autowired
+
+    /**
+     * Field based dependency injection
+     */
+
     private DataService dataService;
+
+    /**
+     * setter based dependency injecction
+     * @return
+     */
+    @Autowired
+    public void setDataService(DataService dataService) {
+        System.out.println("setter based injection");
+        this.dataService = dataService;
+    }
 
     public long calculateSum(){
         List<Integer> data = dataService.getData();
